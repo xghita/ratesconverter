@@ -11,9 +11,12 @@ class SelectedBaseRateHolder(itemView: View?) : BaseBindRateHolder(itemView!!) {
 
     fun bindView(
         currency: Currency,
-        userActionListener: RateChangedListener
+        userActionListener: RateChangedListener,
+        resetBaseRateValue: Boolean
     ) {
-        if (currency.code != itemView.currencyCodeTv.text.toString()) {
+        super.bindCurrency(currency)
+
+        if (resetBaseRateValue) {
 
             itemView.currencyConvertedValueEt.clearTextChangedListeners()
 
@@ -29,8 +32,6 @@ class SelectedBaseRateHolder(itemView: View?) : BaseBindRateHolder(itemView!!) {
                 itemView.currencyConvertedValueEt.text.toString().length
             )
         }
-
-        super.bindCurrency(currency)
 
         itemView.currencyConvertedValueEt.isEnabled = true
 

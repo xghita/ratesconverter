@@ -20,6 +20,8 @@ class RatesAdapter(
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    private var resetBaseRateValue: Boolean = true
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         return when (viewType) {
@@ -57,7 +59,7 @@ class RatesAdapter(
         when (holder.itemViewType) {
             Enums.RATE_CONVERTER_TYPE.SELECTED_TOP_RATE.ordinal -> {
                 val viewHolder = holder as SelectedBaseRateHolder
-                viewHolder.bindView(currenciesList[position], userActionListener)
+                viewHolder.bindView(currenciesList[position], userActionListener, resetBaseRateValue)
             }
             Enums.RATE_CONVERTER_TYPE.LIST_RATE.ordinal -> {
                 val viewHolder = holder as ListRateHolder
@@ -89,6 +91,8 @@ class RatesAdapter(
 
     fun updateBaseRateValue(convertedValue: Double) {
         this.convertedValue = convertedValue
+        
+        resetBaseRateValue = false
         this.notifyDataSetChanged()
     }
 
@@ -101,7 +105,7 @@ class RatesAdapter(
         } else {
             currenciesList.add(toPosition, movingItem)
         }
-
+        resetBaseRateValue = true
         notifyItemMoved(fromPosition, toPosition)
     }
 

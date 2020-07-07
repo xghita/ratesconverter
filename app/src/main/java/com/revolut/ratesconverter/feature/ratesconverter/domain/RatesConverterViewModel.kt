@@ -55,11 +55,12 @@ class RatesConverterViewModel(private val ratesConverterRepository: RatesConvert
 
     override fun onBaseCurrencyChanged(
         newBaseCurrency: Currency,
-        position: Int
+        position: Int,
+        resetBaseRate: Boolean
     ) {
-        previousBaseCurrencyPosition = position
+        onConvertedValueChanged(newBaseCurrency.rate * (convertedValue.value ?: 1.0))
 
-        onConvertedValueChanged(newBaseCurrency.rate * (convertedValue.value?:1.0))
+        previousBaseCurrencyPosition = position
 
         this.baseCurrencyCode.value = newBaseCurrency.code
 
@@ -67,8 +68,11 @@ class RatesConverterViewModel(private val ratesConverterRepository: RatesConvert
         updateCurrenciesList()
     }
 
-    override fun onConvertedValueChanged(value: Double) {
-        convertedValue.value = value
+    override fun onConvertedValueChanged(
+        convertedValue: Double,
+        resetBaseRate: Boolean
+    ) {
+        this.convertedValue.value = convertedValue
     }
 
     private fun disposeObservable() {

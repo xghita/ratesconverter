@@ -1,7 +1,6 @@
-package com.cofedistrict.helpers.ui
+package com.revolut.ratesconverter.main.helper.view
 
 import android.app.Activity
-import android.content.Context
 import android.text.TextUtils.isEmpty
 import android.view.View
 import android.widget.TextView

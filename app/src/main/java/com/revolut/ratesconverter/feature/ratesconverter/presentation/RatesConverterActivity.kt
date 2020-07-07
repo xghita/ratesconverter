@@ -5,10 +5,10 @@ import android.os.Handler
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
-import com.cofedistrict.helpers.ui.InAppBannerNotificationView
 import com.revolut.ratesconverter.R
 import com.revolut.ratesconverter.base.presentation.BaseActivity
 import com.revolut.ratesconverter.feature.ratesconverter.domain.RatesConverterViewModel
+import com.revolut.ratesconverter.main.helper.view.InAppBannerNotificationView
 import kotlinx.android.synthetic.main.activity_rates_converter.*
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
