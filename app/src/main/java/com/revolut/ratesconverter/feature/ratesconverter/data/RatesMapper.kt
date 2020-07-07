@@ -4,11 +4,11 @@ import com.revolut.ratesconverter.main.data.model.currency.Currency
 
 object RatesMapper {
 
-    fun mapHashMapToList(
+    fun createCurrenciesList(
         rates: HashMap<String, String>,
         baseCurrencyCode: String,
         convertedValue: Double
-    ): ArrayList<Currency> {
+    ): List<Currency> {
 
         val currenciesListMapper = ArrayList<Currency>()
 

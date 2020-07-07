@@ -1,7 +1,6 @@
 package com.revolut.ratesconverter.main
 
 import android.app.Application
-import com.revolut.ratesconverter.main.di.ApplicationModule.databaseModule
 import com.revolut.ratesconverter.main.di.ApplicationModule.networkModule
 import com.revolut.ratesconverter.main.di.ApplicationModule.repositoryModule
 import com.revolut.ratesconverter.main.di.ApplicationModule.viewModelModule
@@ -15,7 +14,6 @@ class RatesConverterApplication : Application() {
             androidContext(this@RatesConverterApplication)
             modules(
                 networkModule,
-                databaseModule,
                 repositoryModule,
                 viewModelModule
             )

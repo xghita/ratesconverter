@@ -19,7 +19,7 @@ class ListRateHolder(itemView: View?) : BaseBindRateHolder(itemView!!) {
 
         itemView.currencyConvertedValueEt.isEnabled = false
         itemView.currencyConvertedValueEt.setText(
-            (currency.rate * conversionRate).roundOffDecimal().toString().replace(".", ",")
+            (currency.rate * conversionRate).roundOffDecimal().toString()
         )
 
         itemView.currencyRateLayout.setOnClickListener {

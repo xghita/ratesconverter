@@ -7,5 +7,4 @@ import com.revolut.ratesconverter.main.data.model.currency.Currency
 class UnknownErrorHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
     fun bindView() {}
-
 }

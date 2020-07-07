@@ -1,11 +1,9 @@
 package com.revolut.ratesconverter.main.di
 
-import androidx.room.Room
 import com.readystatesoftware.chuck.ChuckInterceptor
 import com.revolut.ratesconverter.feature.ratesconverter.data.RatesConverterRepository
 import com.revolut.ratesconverter.feature.ratesconverter.data.RatesConverterRepositoryImpl
 import com.revolut.ratesconverter.feature.ratesconverter.domain.RatesConverterViewModel
-import com.revolut.ratesconverter.main.data.db.RatesConverterDatabase
 import com.revolut.ratesconverter.main.network.ApiManager
 import com.revolut.ratesconverter.main.network.ApiManagerImpl
 import okhttp3.OkHttpClient
@@ -41,21 +39,9 @@ object ApplicationModule {
             single<ApiManager> { ApiManagerImpl(get()) }
         }
 
-    val databaseModule = module {
-        single {
-            Room.databaseBuilder(
-                androidContext(),
-                RatesConverterDatabase::class.java,
-                RatesConverterDatabase.DATABASE_NAME
-            ).build()
-        }
-
-        single { get<RatesConverterDatabase>().ratesConverterDao() }
-    }
-
     val repositoryModule = module {
         factory<RatesConverterRepository> {
-            RatesConverterRepositoryImpl(get(), get())
+            RatesConverterRepositoryImpl(get())
         }
     }
 
