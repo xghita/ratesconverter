@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rates Converter</string>
+    <string name="rates_converter_page_title">Rates</string>
+</resources>

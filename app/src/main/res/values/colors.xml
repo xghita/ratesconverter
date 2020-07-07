@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#CED5DB</color>
+    <color name="dark_gray">#484848</color>
+
+
+    <color name="EUR">#8692d1</color>
+    <color name="AUD">#f07f7f</color>
+    <color name="BGN">#5ba361</color>
+    <color name="BRL">#555e56</color>
+    <color name="CAD">#f2d3d3</color>
+    <color name="CHF">#f54040</color>
+    <color name="CNY">#7a6161</color>
+    <color name="CZK">#526cff</color>
+    <color name="DKK">#ff6352</color>
+    <color name="GBP">#4566d1</color>
+    <color name="HKD">#596075</color>
+    <color name="HRK">#cae3e1</color>
+    <color name="HUF">#a0f598</color>
+    <color name="IDR">#0e1c0c</color>
+    <color name="ILS">#b2c9db</color>
+    <color name="INR">#4c5257</color>
+    <color name="ISK">#49a7f5</color>
+    <color name="JPY">#b33600</color>
+    <color name="KRW">#5d6e6d</color>
+    <color name="MXN">#19520b</color>
+    <color name="MYR">#b1c7ab</color>
+    <color name="NOK">#eb6734</color>
+    <color name="NZD">#59707d</color>
+    <color name="PHP">#dac3e6</color>
+    <color name="PLN">#fce6e6</color>
+    <color name="RON">#e3e04f</color>
+    <color name="RUB">#b3a09a</color>
+    <color name="SEK">#2b595e</color>
+    <color name="SGD">#edcee7</color>
+    <color name="THB">#401f39</color>
+    <color name="USD">#2b7807</color>
+    <color name="ZAR">#546b80</color>
+</resources>
