@@ -25,7 +25,7 @@ class RatesConverterViewModel(private val ratesConverterRepository: RatesConvert
 
     var previousBaseCurrencyPosition: Int = 0
     private lateinit var dispose: Disposable
-    private val recursiveAction: Observable<Long> = Observable.interval(0, 7, TimeUnit.MINUTES)
+    private val recursiveAction: Observable<Long> = Observable.interval(0, 1, TimeUnit.MINUTES)
 
     fun updateCurrenciesList() {
 
